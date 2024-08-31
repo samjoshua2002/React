@@ -158,7 +158,7 @@ function PersonDetailForm() {
             >
               Submit
             </button>
-            <button
+            {/* <button
               type="button"
               onClick={handleClear}
               style={{
@@ -171,7 +171,7 @@ function PersonDetailForm() {
               }}
             >
               Clear
-            </button>
+            </button> */}
           </div>
           {error && (
             <div className="text-center mt-3" style={{ color: "red" }}>
