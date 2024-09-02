@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 
+
 function Shakeen() {
     const [data, setData] = useState({ fname: '', lname: '' });
     const [msg, setMsg] = useState('');
@@ -11,8 +12,6 @@ function Shakeen() {
     };
 
     const submit = (e) => {  
-
-        
         e.preventDefault();
         if (data.fname.trim() !== '' && data.lname.trim() !== '') {
             setMsg(`Hello ${data.fname} ${data.lname}`);
@@ -22,64 +21,38 @@ function Shakeen() {
     };
 
     return (
-        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh', backgroundColor: '#f0f0f0' }}>
-            <div style={{ padding: '20px', borderRadius: '8px', backgroundColor: '#fff', boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.1)', width: '300px' }}>
-                <h1 style={{ textAlign: 'center', color: '#000', marginBottom: '20px' }}>Shakeen</h1>
-                <div style={{ marginBottom: '15px' }}>
-                    <label style={{ color: '#000', fontWeight: 'bold' }}>First Name</label>
+        <div className="d-flex justify-content-center align-items-center vh-100 bg-light">
+            <div className="p-4 rounded bg-white w-25 shadow">
+                <h1 className="text-center text-dark mb-4 ">OXOX</h1>
+                <div className="mb-3">
+                    <label className="form-label text-dark fw-bold">First Name</label>
                     <input 
-                        type='text' 
+                        type="text" 
                         value={data.fname} 
                         onChange={change} 
-                        name='fname' 
-                        style={{ 
-                            width: '100%', 
-                            padding: '8px', 
-                            marginTop: '5px', 
-                            marginBottom: '10px', 
-                            borderRadius: '4px', 
-                            border: '1px solid #ccc', 
-                            color: '#000', 
-                            backgroundColor: '#f9f9f9'
-                        }} 
+                        name="fname" 
+                        className="form-control" 
                     />
                 </div>
-                <div style={{ marginBottom: '15px' }}>
-                    <label style={{ color: '#000', fontWeight: 'bold' }}>Last Name</label>
+                <div className="mb-3">
+                    <label className="form-label text-dark fw-bold">Last Name</label>
                     <input 
-                        type='text' 
+                        type="text" 
                         value={data.lname} 
                         onChange={change} 
-                        name='lname' 
-                        style={{ 
-                            width: '100%', 
-                            padding: '8px', 
-                            marginTop: '5px', 
-                            marginBottom: '10px', 
-                            borderRadius: '4px', 
-                            border: '1px solid #ccc', 
-                            color: '#000', 
-                            backgroundColor: '#f9f9f9'
-                        }} 
+                        name="lname" 
+                        className="form-control" 
                     />
                 </div>
                 <div>
                     <button 
                         onClick={submit} 
-                        style={{ 
-                            width: '100%', 
-                            padding: '10px', 
-                            borderRadius: '4px', 
-                            border: 'none', 
-                            backgroundColor: '#000', 
-                            color: '#fff', 
-                            cursor: 'pointer' 
-                        }}
+                        className="btn btn-dark w-100"
                     >
                         Submit
                     </button>
                 </div>
-                {msg && <p style={{ marginTop: '15px', color: '#000', textAlign: 'center' }}>{msg}</p>}
+                {msg && <p className="mt-3 text-dark text-center">{msg}</p>}
             </div>
         </div>
     );
