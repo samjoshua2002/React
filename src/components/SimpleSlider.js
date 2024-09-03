@@ -5,7 +5,7 @@ import "slick-carousel/slick/slick-theme.css";
 import wallpaper1 from '../images/coffee.jpg';
 import wallpaper2 from '../images/GreenTea.jpg';
 import wallpaper3 from '../images/Tea.jpg';
-
+import './SliderStyles.css'; // Import the CSS file for custom styling
 
 export default function SimpleSlider() {
   var settings = {
@@ -14,21 +14,23 @@ export default function SimpleSlider() {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
+    autoplay: true,
+    autoplayspeed:2000,
+    slidesToScroll:1,
+    slidesToShow:1,
+    arrows: false, // Hide the arrows for a cleaner look
   };
   return (
     <Slider {...settings}>
-      <div>
-        <img src={wallpaper1}/>
+      <div className="slide">
+        <img src={wallpaper1} alt="wallpaper 1" className="slide-image"/>
       </div>
-      <div>
-        <img src={wallpaper2}/>
-        
+      <div className="slide">
+        <img src={wallpaper2} alt="wallpaper 2" className="slide-image"/>
       </div>
-      <div>
-        <img src={wallpaper3}/>
-       
+      <div className="slide">
+        <img src={wallpaper3} alt="wallpaper 3" className="slide-image"/>
       </div>
-  
     </Slider>
   );
 }
