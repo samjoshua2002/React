@@ -33,6 +33,7 @@ function Validation() {
     <div className='d-flex justify-content-center align-items-center vh-100' style={{ backgroundColor: '#333' }}>
       <form onSubmit={handleSubmit}>
         <div className='border rounded p-4 shadow-sm' style={{ backgroundColor: '#222', borderColor:"#444" }}>
+        <h1 className="text-center text-white mb-4 ">Login To Enter Counter Page</h1>
           <div className='d-flex flex-column mb-3'>
             <label style={{ color: '#fff' }}>User Name:</label>
             <input 
