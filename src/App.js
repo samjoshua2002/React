@@ -1,4 +1,4 @@
-import React from 'react'; // Import React
+import React, { createContext, useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; // Import React Router components
 import Login from './Login'; // Import your components
 import Dashboard from './Dashboard';
@@ -9,23 +9,29 @@ import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
 import AppNavbar from './components/NavBar'; // Import the AppNavbar component
 import DemoSass from './DemoSass';
 
+export const sanjay =createContext();
+
 function App() {
+  const [values, setValues] = useState('SAM JOSHUA');
   return (
-    <Router> {/* Router should wrap the Routes */}
+    <sanjay.Provider value={{ values, setValues }}>
+    <Router>
       <div>
-        <AppNavbar /> {/* Your custom Navbar component */}
-        <div > {/* Add margin top for spacing */}
-          <Routes> {/* Define your routes */}
+        <AppNavbar />
+        <div>
+          <Routes>
             <Route path='/' element={<Login />} />
             <Route path='/dashboard' element={<Dashboard />} />
             <Route path='/validation' element={<Validation />} />
             <Route path='/validationpractice' element={<ValidationPractice />} />
             <Route path='/shakeen' element={<Shakeen />} />
-            <Route path='/sass' element={<DemoSass/>} />
+            <Route path='/sass' element={<DemoSass />} />
           </Routes>
         </div>
       </div>
     </Router>
+  </sanjay.Provider>
+  
   );
 }
 

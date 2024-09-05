@@ -1,9 +1,15 @@
-import React, { useState } from 'react';
+import React, { useState,useContext } from 'react';
+import { sanjay } from './App';
+
+
 
 
 function Shakeen(props) { //here's the example of props
     const [data, setData] = useState({ fname: '', lname: '' });
     const [msg, setMsg] = useState('');
+    const {values,setValues}=useContext(sanjay);
+    console.log(values)
+
 
     const change = (e) => {
         const name = e.target.name;
@@ -23,7 +29,9 @@ function Shakeen(props) { //here's the example of props
     return (
         <div className="d-flex justify-content-center align-items-center vh-100 bg-light">
             <div className="p-4 rounded bg-white w-25 shadow">
-                <h1 className="text-center text-dark mb-4 ">OXOX- {props.name}</h1>
+                <h1 className="text-center text-dark mb-4 ">OXOX- {localStorage.getItem('key')}</h1>
+                
+                {/* <h1 className="text-center text-dark mb-4 ">OXOX- {props.name}</h1> */}
                 <div className="mb-3">
                     <label className="form-label text-dark fw-bold">First Name</label>
                     <input 

@@ -16,7 +16,7 @@ function Dashboard() {
           <Link to="/shakeen">
             <button className="btn btn-dark">Go to Welcome page</button>
           </Link>
-          {/* <Shakeen name="Sam"/> //this is the example for props */}
+         {/* <Shakeen name="Sam"/> //this is the example for props  */}
 
         </div>
       </div>
