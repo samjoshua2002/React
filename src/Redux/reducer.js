@@ -1,7 +1,7 @@
 const initial={
      count :0,
 }
-const CounterReducer =(state = initial,action)=>{
+const CounterReducer =(state = initial, action)=>{
     switch (action.type) {
         case 'INCREMENT':
             return{
@@ -20,3 +20,4 @@ const CounterReducer =(state = initial,action)=>{
             return state;
     }
 };
+export default CounterReducer;

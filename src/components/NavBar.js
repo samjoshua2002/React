@@ -16,6 +16,7 @@ const AppNavbar = () => {
             <Nav.Link as={Link} to="/validationpractice">Validation Practice</Nav.Link>
             <Nav.Link as={Link} to="/shakeen">Shakeen</Nav.Link>
             <Nav.Link as={Link} to="/sass">Sass</Nav.Link>
+            <Nav.Link as={Link} to="/redux">Redux</Nav.Link>
            
           </Nav>
           
