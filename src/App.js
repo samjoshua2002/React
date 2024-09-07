@@ -8,7 +8,9 @@ import Shakeen from './Shakeen';
 import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
 import AppNavbar from './components/NavBar'; // Import the AppNavbar component
 import DemoSass from './DemoSass';
-import ReduxCounter from "./ReduxCounter";
+import Calculation from "./ReduxExamples/Main";
+
+
 
 
 export const sanjay =createContext();
@@ -28,7 +30,7 @@ function App() {
             <Route path='/validationpractice' element={<ValidationPractice />} />
             <Route path='/shakeen' element={<Shakeen />} />
             <Route path='/sass' element={<DemoSass />} />
-            <Route path='/redux' element={<ReduxCounter />} />
+            <Route path='/redux' element={<Calculation/>} />
           </Routes>
         </div>
       </div>
