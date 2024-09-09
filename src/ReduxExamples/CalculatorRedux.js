@@ -14,15 +14,19 @@ function CalculatorRedux() {
     const clearInputs = () => {
         setNum1(0);
         setNum2(0);
+        
     };
 
     return (
         <div className="d-flex justify-content-center align-items-center vh-100 bg-light">
-            <div className="p-4 rounded bg-white w-25 shadow-lg">
+            <div 
+                className="p-4 rounded bg-white shadow-lg" 
+                style={{ width: '70%' }}
+            >
                 <h1 className="text-center text-dark mb-4">Calculator</h1>
                 <h4 className="text-center text-dark">Result: {result}</h4>
 
-                {/* Input fields for numbers */}
+               
                 <div className="form-group mb-3">
                     <input
                         type="number"
@@ -42,7 +46,7 @@ function CalculatorRedux() {
                     />
                 </div>
 
-                {/* Operation buttons */}
+              
                 <div className="d-flex justify-content-center gap-3 mt-5">
                     <button className="btn btn-dark" onClick={() => dispatch(addition(num1, num2))}>
                         +

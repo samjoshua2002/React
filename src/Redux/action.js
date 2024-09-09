@@ -11,7 +11,8 @@ export  const decrement =()=>{
 export const addition = (num1, num2) => {
     return {
         type: 'ADDITION',
-        payload: { num1, num2 }
+        num1:num1,
+        num2:num2,
     };
 };
 

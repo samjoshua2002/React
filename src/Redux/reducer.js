@@ -18,7 +18,7 @@ const CounterReducer = (state = initial, action) => {
         case 'ADDITION':
             return {
                 ...state,
-                result: action.payload.num1 + action.payload.num2 
+                result: action.num1 + action.num2 
             };
         case 'SUBTRACTION':
             return {
