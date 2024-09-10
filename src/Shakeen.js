@@ -4,10 +4,10 @@ import { sanjay } from './App';
 
 
 
-function Shakeen(props) { //here's the example of props
+function Shakeen(/*props*/) { //here's the example of props
     const [data, setData] = useState({ fname: '', lname: '' });
     const [msg, setMsg] = useState('');
-    const {values,setValues}=useContext(sanjay);
+    const {values}=useContext(sanjay);
     console.log(values)
 
 

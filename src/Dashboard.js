@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css'; // Ensure Bootstrap CSS is imported
 import SimpleSlider from './components/SimpleSlider';
-import Shakeen from './Shakeen';
+// import Shakeen from './Shakeen';
 
 function Dashboard() {
   return (
