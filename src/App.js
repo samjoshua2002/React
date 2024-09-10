@@ -9,6 +9,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
 import AppNavbar from './components/NavBar'; // Import the AppNavbar component
 import DemoSass from './DemoSass';
 import Calculation from "./ReduxExamples/Main";
+import UseEffectApi from "./UseEffectApi";
 
 
 
@@ -31,6 +32,7 @@ function App() {
             <Route path='/shakeen' element={<Shakeen />} />
             <Route path='/sass' element={<DemoSass />} />
             <Route path='/redux' element={<Calculation/>} />
+            <Route path='/useeffect' element={<UseEffectApi/>} />
           </Routes>
         </div>
       </div>
