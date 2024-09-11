@@ -21,18 +21,18 @@ function Practice() {
   }, []);
 
   return (
-    <div className="container mx-auto my-8">
+    <div className="container mx-auto mt-3">
       <h1 className="text-2xl font-bold text-center mb-4">Posts Table</h1>
-      <div className="overflow-x-auto">
-        <table className="min-w-full bg-white border border-gray-300">
-          <thead>
-            <tr className="bg-gray-200 text-gray-600 uppercase text-sm leading-normal">
+      <div className="overflow-y-auto">
+        <table className="min-w-full bg-white border border-gray-300 ">
+          
+            <tr className="bg-gray-200 text-gray-600 uppercase text-sm">
               <th className="py-3 px-2 text-left">User ID</th>
               <th className="py-3 px-2 text-left">Post ID</th>
               <th className="py-3 px-6 text-left">Title</th>
               <th className="py-3 px-6 text-left">Body</th>
             </tr>
-          </thead>
+          
           <tbody className="text-gray-600 text-sm font-light">
             {state.map(post => (
               <tr key={post.id} className="border-b border-gray-200 hover:bg-gray-100">

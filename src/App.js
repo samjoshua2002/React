@@ -11,6 +11,8 @@ import DemoSass from './DemoSass';
 import Calculation from "./ReduxExamples/Main";
 import UseEffectApi from "./API/UseEffectApi";
 import Practice from "./API/Practice";
+import FetchControl from "./API/Fetch";
+import Own from "./API/Own";
 
 
 
@@ -37,6 +39,8 @@ function App() {
             <Route path='/redux' element={<Calculation/>} />
             <Route path='/useeffect' element={<UseEffectApi/>} />
             <Route path='/demo' element={<Practice/>} />
+            <Route path='/demo2' element={<FetchControl/>} />
+            <Route path='/own' element={<Own/>} />
           </Routes>
         </div>
       </div>

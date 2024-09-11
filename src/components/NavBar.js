@@ -18,6 +18,8 @@ const AppNavbar = () => {
           <Nav.Link as={Link} to="/redux">Redux</Nav.Link>
           <Nav.Link as={Link} to="/useeffect">API</Nav.Link>
           <Nav.Link as={Link} to="/demo">Practice</Nav.Link>
+          <Nav.Link as={Link} to="/demo2">Practice 2</Nav.Link>
+          <Nav.Link as={Link} to="/own">Practice 3</Nav.Link>
         </Nav>
       </Container>
     </Navbar>
