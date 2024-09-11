@@ -12,9 +12,9 @@ function UseEffectApi() {
                 }
                 return response.json();
             })
-            .then(ans => {
-                console.log(ans, 'API Response');
-                setData(ans);
+            .then(response => {
+                console.log(response, 'API Response');
+                setData(response);
             })
             .catch(error => {
                 console.log(error, 'Error');

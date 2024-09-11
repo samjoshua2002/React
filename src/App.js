@@ -9,7 +9,10 @@ import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
 import AppNavbar from './components/NavBar'; // Import the AppNavbar component
 import DemoSass from './DemoSass';
 import Calculation from "./ReduxExamples/Main";
-import UseEffectApi from "./UseEffectApi";
+import UseEffectApi from "./API/UseEffectApi";
+import Practice from "./API/Practice";
+
+
 
 
 
@@ -22,7 +25,7 @@ function App() {
     <sanjay.Provider value={{ values, setValues }}>
     <Router>
       <div>
-        <AppNavbar />
+        <AppNavbar/>
         <div>
           <Routes>
             <Route path='/' element={<Login />} />
@@ -33,6 +36,7 @@ function App() {
             <Route path='/sass' element={<DemoSass />} />
             <Route path='/redux' element={<Calculation/>} />
             <Route path='/useeffect' element={<UseEffectApi/>} />
+            <Route path='/demo' element={<Practice/>} />
           </Routes>
         </div>
       </div>
