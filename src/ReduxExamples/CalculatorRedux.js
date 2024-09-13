@@ -9,6 +9,7 @@ function CalculatorRedux() {
 
    
     const result = useSelector((state) => state.result);
+    
     const dispatch = useDispatch();
     const clears=()=>{
         dispatch(clear());
