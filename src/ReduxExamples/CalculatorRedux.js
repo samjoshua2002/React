@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { addition, subtraction, multiplication, division } from '../Redux/action';
+import { addition, subtraction, multiplication, division, clear } from '../Redux/action';
 
 function CalculatorRedux() {
   
@@ -10,12 +10,14 @@ function CalculatorRedux() {
    
     const result = useSelector((state) => state.result);
     const dispatch = useDispatch();
-
-    const clearInputs = () => {
+    const clears=()=>{
+        dispatch(clear());
         setNum1(0);
         setNum2(0);
         
-    };
+    }
+
+   
 
     return (
         <div className="d-flex justify-content-center align-items-center vh-100 bg-light">
@@ -60,7 +62,7 @@ function CalculatorRedux() {
                     <button className="btn btn-dark" onClick={() => dispatch(division(num1, num2))}>
                         /
                     </button>
-                    <button className="btn btn-secondary" onClick={clearInputs}>
+                    <button className="btn btn-secondary" onClick={clears}>
                         Clear
                     </button>
                 </div>

@@ -16,7 +16,7 @@ function ReduxCounter() {
                 <hr></hr>
                 <h2 className="text-center text-dark mt-5 ">Count : {count}</h2>
                 <hr className='mt-5'></hr>
-                <div className="d-flex justify-content-center gap-3 mt-5  ">
+                <div className="d-flex justify-content-center gap-3 mt-3  ">
                     <button className="btn btn-dark " onClick={() => dispatch(increment())}>
                         Increment
                     </button>

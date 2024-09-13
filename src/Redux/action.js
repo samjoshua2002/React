@@ -36,3 +36,9 @@ export const division = (num1, num2) => {
         payload: { num1, num2 }
     };
 };
+export const clear = () => {
+    return {
+        type: 'CLEAR',
+        
+    };
+};
