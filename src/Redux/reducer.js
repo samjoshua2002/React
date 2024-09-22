@@ -30,6 +30,11 @@ const CounterReducer = (state = initial, action) => {
                 ...state,
                 result: action.payload.num1 * action.payload.num2 
             };
+            case 'CLEAR':
+            return {
+                ...state,
+                result: 0 
+            };
         case 'DIVISION':
             if (action.payload.num2 === 0) {
                 console.error('Division by zero is not allowed');
