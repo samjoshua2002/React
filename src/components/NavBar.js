@@ -8,7 +8,7 @@ const AppNavbar = () => {
     <Navbar bg="dark" variant="dark">
       <Container>
         <Navbar.Brand as={Link} to="/">Counter</Navbar.Brand>
-        {/* Remove Toggle and Collapse */}
+       
         <Nav className="me-auto">
           <Nav.Link as={Link} to="/dashboard">Dashboard</Nav.Link>
           <Nav.Link as={Link} to="/validation">Validation</Nav.Link>
@@ -20,6 +20,8 @@ const AppNavbar = () => {
           <Nav.Link as={Link} to="/demo">Practice</Nav.Link>
           <Nav.Link as={Link} to="/demo2">Practice 2</Nav.Link>
           <Nav.Link as={Link} to="/own">Practice 3</Nav.Link>
+          <Nav.Link as={Link} to="/useref">useref and usememo</Nav.Link>
+          <Nav.Link as={Link} to="/MU">Material UI</Nav.Link>
         </Nav>
       </Container>
     </Navbar>

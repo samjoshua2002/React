@@ -5,6 +5,7 @@ import "slick-carousel/slick/slick-theme.css";
 import wallpaper1 from '../images/coffee.jpg';
 import wallpaper2 from '../images/GreenTea.jpg';
 import wallpaper3 from '../images/Tea.jpg';
+
 import './SliderStyles.css'; 
 
 export default function SimpleSlider() {

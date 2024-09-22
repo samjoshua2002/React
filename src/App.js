@@ -13,6 +13,8 @@ import UseEffectApi from "./API/UseEffectApi";
 import Practice from "./API/Practice";
 import FetchControl from "./API/Fetch";
 import Own from "./API/Own";
+import GreenClass from "./UseRef-and-Usememo/GreenClass";
+import Custom from "./Material_Ui/Custom";
 
 
 
@@ -41,6 +43,8 @@ function App() {
             <Route path='/demo' element={<Practice/>} />
             <Route path='/demo2' element={<FetchControl/>} />
             <Route path='/own' element={<Own/>} />
+            <Route path='/useref' element={<GreenClass/>} />
+            <Route path='/MU' element={<Custom/>} />
           </Routes>
         </div>
       </div>
