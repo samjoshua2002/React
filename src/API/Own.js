@@ -1,8 +1,12 @@
 import React,{useState,useEffect} from 'react'
+import ReactPaginate from 'react-paginate';
+import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 
 
 function Own() {
     const [data, setdata] = useState([]);
+    const [itemOffset, setItemOffset] = useState(0);
+    const itemsPerPage=5;
     useEffect(() => {
         fetch("https://fake-json-api.mock.beeceptor.com/users/%7Buser_id%7D")
         .then(response=>{
@@ -23,6 +27,18 @@ function Own() {
         
         
     }, []);
+    const endOffset = itemOffset + itemsPerPage;
+  console.log(`Loading items from ${itemOffset} to ${endOffset}`);
+  const currentItems = data.slice(itemOffset, endOffset);
+  const pageCount = Math.ceil(data.length / itemsPerPage);
+  const handlePageClick = (event) => {
+    const newOffset = (event.selected * itemsPerPage) % data.length;
+    console.log(
+      `User requested page number ${event.selected}, which is offset ${newOffset}`
+    );
+    setItemOffset(newOffset);
+  };
+
   return (
     <div className='mx-auto container justify-center my-3 '>
         <div className='text-2xl font-bold text-center mb-3'>Employee details</div>
@@ -40,7 +56,7 @@ function Own() {
                 
             </tr>
             
-            {data.map(res=>(
+            {currentItems.map(res=>(
                 <tr key={res.id}>
                     <td className='py-3 px-3 text-sm'>{res.id}</td>
                     <td className='py-3 text-sm'>{res.name}</td>
@@ -57,8 +73,25 @@ function Own() {
             ))}
 
         </table>
-
+        <ReactPaginate
+        breakLabel="..."
+        nextLabel={<FaChevronRight />} // Use icons for pagination controls
+        previousLabel={<FaChevronLeft />}
+        onPageChange={handlePageClick}
+        pageRangeDisplayed={3}
+        marginPagesDisplayed={2}
+        pageCount={pageCount}
+        containerClassName="flex justify-center items-center space-x-3 mt-4" // Flexbox for center alignment
+        pageClassName="border rounded-lg px-3 py-1 hover:bg-gray-200" // Styling for individual page numbers
+        activeClassName="bg-blue-500 text-white"
+        breakClassName="px-3 py-1"
+        previousClassName="px-3 py-1 hover:bg-gray-200" // Previous button styling
+        nextClassName="px-3 py-1 hover:bg-gray-200" // Next button styling
+        disabledClassName="opacity-50 cursor-not-allowed" // Disable button styles
+        pageLinkClassName="text-gray-700"
+      />
     </div>
+
   )
 }
 

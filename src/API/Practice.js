@@ -23,10 +23,10 @@ function Practice() {
   return (
     <div className="container mx-auto mt-3">
       <h1 className="text-2xl font-bold text-center mb-4">Posts Table</h1>
-      <div className="overflow-y-auto">
+      <div className="overflow-y-auto h-[540px]">
         <table className="min-w-full bg-white border border-gray-300 ">
           
-            <tr className="bg-gray-200 text-gray-600 uppercase text-sm">
+            <tr className="bg-gray-200 text-gray-600 uppercase text-sm sticky top-0">
               <th className="py-3 px-2 text-left">User ID</th>
               <th className="py-3 px-2 text-left">Post ID</th>
               <th className="py-3 px-6 text-left">Title</th>
