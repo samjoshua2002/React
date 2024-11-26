@@ -8,7 +8,7 @@ function Dashboard() {
   return (
     <div>
 
-    <SimpleSlider/>
+    
     <div className="d-flex justify-content-center align-items-center min-vh-100 bg-white">
       <div className="bg-white border border-dark p-4 rounded shadow-sm">
         <h1 className="text-center mb-4">Dashboard</h1>
@@ -21,6 +21,7 @@ function Dashboard() {
         </div>
       </div>
     </div>
+    <SimpleSlider/>
     </div>
   );
 }
